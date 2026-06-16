@@ -1,9 +1,9 @@
 services:
   - type: web
     name: webdashboard
-    runtime: static
+    runtime: node
     buildCommand: npm install && npm run build
-    staticPublishPath: ./dist
+    startCommand: npm run preview
     routes:
       - type: rewrite
         source: /*
